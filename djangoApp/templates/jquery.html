@@ -1,0 +1,160 @@
+<script>
+    $(document).ready(function(){
+
+        $("#submit").click(function(){
+
+            var fnm = $("#firstname").val();
+
+            if (fnm==""){
+                $("#firstError").html('<p>**Please Enter First Name</p>');
+                $("#firstError").css('color','red')
+                return false;
+
+            }
+        });
+        $("#submit").click(function(){
+            
+            var lnm = $("#lastname").val();
+
+            if (lnm==""){
+                $("#lastError").html('<p>**Please Enter Last Name</p>');
+                $("#lastError").css('color','red')
+                return false;
+
+            }
+        });
+        $("#submit").click(function(){
+            
+            var fn= $("#fname").val();
+
+            if (fn==""){
+                $("#fatherError").html('<p>**Please Enter Father Name</p>');
+                $("#fatherError").css('color','red')
+                return false;
+
+            }
+        });
+        $("#submit").click(function(){
+            
+            var mn = $("#mname").val();
+
+            if (mn==""){
+                $("#motherError").html('<p>**Please Enter Mother Name</p>');
+                $("#motherError").css('color','red')
+                return false;
+
+            }
+        });
+        $("#submit").click(function(){
+            
+            var em = $("#email").val();
+
+            if (em == ""){
+                $("#emailError").html('<p>**Plese Enter The Email</p>')
+                $("#emailError").css('color','red')
+            }
+        });
+        $("#submit").click(function(){
+            
+            var ph = $("#phone").val();
+
+            if (ph == ""){
+                $("#phoneError").html('<p>**Plese Enter The Phone Number</p>')
+                $("#phoneError").css('color','red')
+            }
+        });
+        $("#submit").click(function(){
+            
+            var vl = $("#village").val();
+
+            if (vl == ""){
+                $("#villageError").html('<p>**Plese Enter The Village</p>')
+                $("#villageError").css('color','red')
+            }
+        });
+        $("#submit").click(function(){
+            
+            var dis = $("#distric").val();
+
+            if (dis == ""){
+                $("#districError").html('<p>**Plese Enter The Distric</p>')
+                $("#districError").css('color','red')
+            }
+        });
+        $("#submit").click(function(){
+            
+            var pc = $("#pincode").val();
+
+            if (pc == ""){
+                $("#pinError").html('<p>**Plese Enter The Pin Code</p>')
+                $("#pinError").css('color','red')
+            }
+        });
+        $("#submit").click(function(){
+            
+            var st = $("#state").val();
+
+            if (st == ""){
+                $("#stateError").html('<p>**Plese Enter The Pin Code</p>')
+                $("#stateError").css('color','red')
+            }
+        });
+        $('#submit').click(function(){
+           var pw1 = $('#pwd').val();
+
+           if(pw1 == ""){
+              $('#pwdError').html('<p>**Please Enter Password</p>');
+              $('#pwdError').css('color','red');
+              return false;
+           }
+        });
+        $('#submit').click(function(){
+         var pass = $('#cpwd').val();
+
+         if(pass == ""){
+            $('#cpwdError').html('<p>**Please Enter Password</p>');
+            $('#cpwdError').css('color','red');
+            return false;
+         }
+      });
+      $("#cpwd").keyup(function(){
+        var pwd = $("#pwd").val();
+        var cpwd = $("#cpwd").val();
+
+        if (cpwd!=pwd){
+            $('#cpwdError').html("<p>**Password does'nt match Please Enter right password</p>");
+            $('#cpwdError').css('color','red');
+            return false;
+        } else {
+            $('#cpwdError').html('');
+            return true;
+        }
+      })
+      $("#lsubmit").click(function(){
+           var em = $("#email").val();
+
+           if (em == ""){
+             $("#emailError").html('<p>**Plese Enter The Email</p>')
+             $("#emailError").css('color','red')
+            }
+        })
+        $("#lsubmit").click(function(){
+            var pass = $('#password').val();
+
+            if(pass == ""){
+                $('#PassError').html('<p>**Please Enter Password</p>');
+                $('#PassError').css('color','red');
+                return false;
+            }
+        })
+        $("#fsubmit").click(function(){
+            var em = $('#email').val();
+
+            if(em == ""){
+                $('#emailError').html('<p>**Please Enter Email</p>');
+                $('#emailError').css('color','red');
+                return false;
+            }
+        })
+    });
+</script>

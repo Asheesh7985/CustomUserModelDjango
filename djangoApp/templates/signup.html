@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container col-sm-10">
+    <div class="row">
+        <h1 class="text-center border-bottom">Registration Here </h1>
+        <p class="mt-2 fw-bold float-end">if You All ready Registerd?<a href="{% url 'login' %}">Login Here</a></p>
+    </div>
+    {% if messages %}
+       {% for message in messages %}
+           <p {% if message.tags %} class="alert alert-{{message.tags}} mb-5" {% endif %}>{{message}}</p>
+       {% endfor %}
+   {% endif %}
+    <form action="" method="POST">
+       {% csrf_token %}
+       <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="firstname" class="text-primary fw-bold">First Name<span class="text-danger">**</span></label>
+                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please Enter First Name">
+                <div id="firstError"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="lastname" class="text-primary fw-bold">Last Name<span class="text-danger">**</span></label>
+                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Please Enter Last Name">
+                <div id="lastError"></div>
+            </div>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="fname" class="text-primary fw-bold">Father Name</label>
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="Please Enter Father Name">
+                <div id="fatherError"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="mname" class="text-primary fw-bold">Mother Name</label>
+                <input type="text" class="form-control" name="mname" id="mname" placeholder="Please Enter Mother Name">
+                <div id="motherError"></div>
+            </div>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="email" class="text-primary fw-bold">Email<span class="text-danger">**</span></label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Please Enter Email">
+                <div id="emailError"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="phone" class="text-primary fw-bold">Phone</label>
+                <input type="number" class="form-control" name="phone" id="phone" placeholder="Please Enter Phone">
+                <div id="phoneError"></div>
+            </div>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="village" class="text-primary fw-bold">Village<span class="text-danger">**</span></label>
+                <input type="text" class="form-control" name="village" id="village" placeholder="Please Enter Village**">
+                <div id="villageError"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="distric" class="text-primary fw-bold">Distric</label>
+                <input type="text" class="form-control" name="distric" id="distric" placeholder="Please Enter Distric">
+                <div id="districError"></div>
+            </div>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="picode" class="text-primary fw-bold">Postal code<span class="text-danger">**</span></label>
+                <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Please Enter Postal Code**">
+                <div id="pinError"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="state" class="text-primary fw-bold">State<span class="text-danger">**</span></label>
+                <input type="text" class="form-control" name="state" id="state" placeholder="Please Enter State**">
+                <div id="stateError"></div>
+            </div>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+               <label for="pwd" class="text-primary fw-bold">Password<span class="text-danger">**</span></label>
+               <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Please Enter Password**">
+              <div id="pwdError"></div>
+           </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group mt-3">
+                <label for="cpwd" class="text-primary fw-bold">Confirm Password (Again)<span class="text-danger">**</span></label>
+                <input type="password" class="form-control" name="cpwd" id="cpwd" placeholder="Please Enter Confirm Password**">
+                <div id="cpwdError"></div>
+            </div>
+        </div>
+       </div>
+       
+       <div class="mt-3 mb-5">
+           <input type="submit" value="Submit" class="btn btn-success btn-lg" id="submit">
+
+           <a href="{% url 'login' %}" class="btn btn-warning btn-lg m-3">Login</a>
+       </div>
+    </form>
+   </div>
+{% endblock  %}

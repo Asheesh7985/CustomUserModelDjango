@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container col-sm-8">
+    <h1 class="text-warning">Hello,<span class="text-danger">{{user.first_name}} {{user.last_name}}</span>
+    Congratulation You are registerd Successfully.<br/>
+    If you want to login click here?<a href="{% url 'login' %}">Login Here</a></h1>
+</div>
+{% endblock  %}
